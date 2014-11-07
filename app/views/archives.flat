@@ -129,14 +129,15 @@ body {
             }
           }
         }
-        footer(role: "contentinfo") {
-          p {
-            pp "Copyright &copy; 2014 - Fabio Kenji - "
-            span(class: "credit") {
-              pp "Powered by " 
-              a(href:"http://octopress.org") { "Octopress" }
-            }
-          }
+      }
+    }
+
+    footer(role: "contentinfo") {
+      p {
+        pp "Copyright &copy; 2014 - Fabio Kenji - "
+        span(class: "credit") {
+          pp "Powered by " 
+          a(href:"http://octopress.org") { "Octopress" }
         }
       }
     }
