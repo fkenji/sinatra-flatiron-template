@@ -1,0 +1,145 @@
+html(class:"no-js", lang:"en") {
+  head {
+    meta(charset: "utf-8")
+    title { "Blog Archive - Blockish" }
+    meta(name:"author", content:"Fabio Kenji")
+    meta(name:"description", content:"Blog Archive 2014 Insights on Require, Require_relative and Bundler
+Nov 04 2014 Describing Your Classes With RSpec
+Oct 21 2014 Everything Is an &hellip;")
+    meta(name:"HandheldFriendly", content:"True")
+    meta(name:"MobileOptimized", content:"320")
+    meta(name:"viewport", content:"width=device-width, initial-scale=1")
+
+    link(rel: "canonical" , href:"http://fkenji.github.io/blog/archives")
+    link(rel: "icon"      , href:"http://fkenji.github.io/favicon.png")
+    link(rel: "stylesheet", href:"http://fkenji.github.io/stylesheets/screen.css",
+         media:"screen, projection", type:"text/css")
+    link(rel: "alternate" , href:"http://fkenji.github.io/atom.xml", title: "Blockish")    
+    script(src: "http://fkenji.github.io/javascripts/modernizr-2.0.js")
+    script(src: "http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js")
+    script {
+      "!window.jQuery && document.write(unescape('%3Cscript src=\"./javascripts/libs/jquery.min.js\"%3E%3C/script%3E'))"
+    }
+    script(src: "http://fkenji.github.io/javascripts/octopress.js", type: "text/javascript")
+    link(rel:"stylesheet", type:"text/css", href:"http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic")
+    link(rel:"stylesheet", type:"text/css", href:"http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic")
+  }
+
+body {
+    header(role: "banner") {
+      hgroup{
+        h1 { a(href:"/"){ "Blockish" } }
+        h2 { "self << \"Ruby\""}
+      }
+    }
+    
+    nav(role:"navigation") {
+      ul(class: "subscription", :"data-subscription" => "rss") {
+        li { a(href:"/atom.xml", rel:"subscribe-rss", title:"subscribe via RSS") { "RSS" } }
+      }
+      ul(class: "main-navigation") {
+        li {
+          a(href:"/") { "Blog" }
+        }
+        li {
+          a(href:"/blog/archives") { "Archives" } 
+        }
+      }
+    }
+
+    div(id:"main") {
+      div(id:"content") {
+        div {
+          article(role: "article") {
+            header {
+              h1(class: "entry-title") { "Blog Archive" }
+            }
+            div(id: "blog-archives") {
+              h2 { "2014" }
+              article {
+                h1 {
+                  a(href: "http://fkenji.github.io/blog/2014/11/04/bundler/") {
+                    "Insights on Require, Require_relative and Bundler"
+                  }
+                }
+                time(datetime: '2014-11-04T14:40:08-05:00') {
+                  span(class: 'month') { "Nov" }
+                  span(class: 'day') { "04" }
+                  span(class: 'year') { "2014" }
+                }
+              }
+
+              article {
+                h1 {
+                  a(href: "http://fkenji.github.io/blog/2014/10/21/rspec/") {
+                    "Describing Your Classes With RSpec"
+                  }
+                }
+                time(datetime: '2014-10-21T15:57:17-04:00', pubdate: '') {
+                  span(class: 'month') { "Oct" }
+                  span(class: 'day') { "21" }
+                  span(class: 'year') { "2014" }
+                }                
+              }
+
+              article {
+                h1 {
+                  a(href: "http://fkenji.github.io/blog/2014/10/06/everything-is-an-object/") {
+                    "Everything Is an Object"
+                  }
+                }
+                time(datetime: '2014-10-21T15:57:17-04:00', pubdate: '') {
+                  span(class: 'month') { "Oct" }
+                  span(class: 'day') { "06" }
+                  span(class: 'year') { "2014" }
+                }
+                footer {
+                  span(class: "categories") {
+                    pp "posted in "
+                    ["fixnum", "message", "method", "number", "object", "ruby"].each do |category|
+                      a(class: "category", href: "http://fkenji.github.io/blog/categories/#{category}/"){ " #{category} " }
+                    end
+                  }
+                }                                
+              }
+            }
+          }
+        }
+
+        aside(class: "sidebar") {
+          section {
+            h1 { "Recent Posts" }
+            ul(id:"recent_posts") {
+              li(class: "post") {
+                a(href: "http://fkenji.github.io/blog/2014/11/04/bundler/"){
+                  "Insights on Require, Require_relative and Bundler"
+                }
+              }
+
+              li(class: "post") {
+                a(href: "http://fkenji.github.io/blog/2014/10/21/rspec/"){
+                  "Describing Your Classes with RSpec"
+                }
+              }              
+              li(class: "post") {
+                a(href: "http://fkenji.github.io/blog/2014/10/06/everything-is-an-object/"){
+                  "Everything Is An Object"
+                }
+              }              
+            }
+          }
+        }
+        footer(role: "contentinfo") {
+          p {
+            pp "Copyright &copy; 2014 - Fabio Kenji - "
+            span(class: "credit") {
+              pp "Powered by " 
+              a(href:"http://octopress.org") { "Octopress" }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

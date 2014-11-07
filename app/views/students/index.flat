@@ -1,0 +1,17 @@
+html {
+  link(rel: 'stylesheet', href: 'test/test.css')
+  body {
+    h1 {
+      "Students directory"
+    }
+
+    @students.each do |student| 
+        p {
+          pp "#{student.name} - #{student.age} "
+          a(href: "students/#{student.name}"){
+            "Show"
+          }
+        }
+    end
+  }
+}
