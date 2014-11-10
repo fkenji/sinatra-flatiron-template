@@ -1,16 +1,19 @@
 html {
-  link(rel: 'stylesheet', href: 'test/test.css')
   body {
     h1 {
-      "Students directory"
+      "Flatiron Students"
     }
 
     @students.each do |student| 
         p {
-          pp "#{student.name} - #{student.age} "
-          a(href: "students/#{student.name}"){
+          pp "#{student.name} "
+          a(href: "students/#{student.id}"){
             "Show"
           }
+          pp '|'
+          a(href: "students/#{student.id}"){
+            "Edit"
+          }          
         }
     end
   }

@@ -1,0 +1,11 @@
+html {
+  head
+  body {
+    h1 { @student.name }
+    img(src: @student.jpg_to, width:"250px", height: "250px")
+    p { "Name: #{@student.name}" }
+    p { "Age: #{@student.age}" }
+    p { "City: #{@student.city}" }
+    a(href:"/"){ "Back" }
+  }
+}

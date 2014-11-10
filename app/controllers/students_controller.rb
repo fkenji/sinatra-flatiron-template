@@ -1,16 +1,14 @@
 class StudentsController < ApplicationController
 
   get '/' do
-    @students = []
-    1.upto(4) do |num|
-        @students << Student.new.tap do |student|
-          student.name = "Student#{num}"
-          student.age = 30
-          student.city = "New York"
-        end
-    end
+    @students = Student.all
 
     flat :"students/index"
+  end
+
+  get '/students/:id' do
+    @student = Student.find(params[:id])
+    flat :"students/show"
   end
 
   get '/archives' do 
