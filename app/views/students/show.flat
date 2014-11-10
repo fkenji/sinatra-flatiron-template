@@ -1,11 +1,27 @@
 html {
-  head
+  head {
+    title { "The Flatiron School"}
+    link(href:"/css/bootstrap.css", rel:"stylesheet")
+  }
   body {
-    h1 { @student.name }
-    img(src: @student.jpg_to, width:"250px", height: "250px")
-    p { "Name: #{@student.name}" }
-    p { "Age: #{@student.age}" }
-    p { "City: #{@student.city}" }
-    a(href:"/"){ "Back" }
+    nav(class:"navbar navbar-inverse navbar-fixed-top") {
+      div(class:"container") {
+        div(class: "navbar-header"){
+          pp "//"
+          a(class: "navbar-brand", href:"http://www.flatironschool.com") {"The Flatiron School"}
+        }
+      }
+    }
+    div(class:"container") {
+      div(class:"starter-template") {
+        h1 { @student.name }
+        img(src: @student.jpg_to, width:"250px", height: "250px")
+        p { "Name: #{@student.name}" }
+        p { "Age: #{@student.age}" }
+        p { "City: #{@student.city}" }
+        a(href:"/"){ "Back" }
+      }
+    }
   }
 }
+

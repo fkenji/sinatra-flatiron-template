@@ -1,20 +1,31 @@
 html {
+  head {
+    title { "The Flatiron School"}
+    link(href:"/css/bootstrap.css", rel:"stylesheet")
+  }
   body {
-    h1 {
-      "Flatiron Students"
-    }
-
-    @students.each do |student| 
-        p {
-          pp "#{student.name} "
-          a(href: "students/#{student.id}"){
-            "Show"
-          }
-          pp '|'
-          a(href: "students/#{student.id}"){
-            "Edit"
-          }          
+    nav(class:"navbar navbar-inverse navbar-fixed-top") {
+      div(class:"container") {
+        div(class: "navbar-header"){
+          a(class: "navbar-brand", href:"http://www.flatironschool.com") {"The Flatiron School"}
         }
-    end
+      }
+    }
+    div(class:"container") {
+      div(class:"starter-template") {
+          @students.each do |student| 
+              p {
+                pp "#{student.name} "
+                a(href: "students/#{student.id}"){
+                  "Show"
+                }
+                pp '|'
+                a(href: "students/#{student.id}"){
+                  "Edit"
+                }          
+              }
+          end
+      }
+    }
   }
 }
